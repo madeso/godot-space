@@ -1,16 +1,30 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://sprites/background.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://sprites/player_1.png" type="Texture" id=3]
 [ext_resource path="res://sprites/player_2.png" type="Texture" id=4]
+[ext_resource path="res://sprites/player_left_1.png" type="Texture" id=5]
+[ext_resource path="res://sprites/player_left_2.png" type="Texture" id=6]
+[ext_resource path="res://sprites/player_right_1.png" type="Texture" id=7]
+[ext_resource path="res://sprites/player_right_2.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "default",
+"name": "Default",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Left",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Right",
 "speed": 10.0
 } ]
 _sections_unfolded = [ "Resource" ]
@@ -41,7 +55,7 @@ __meta__ = {
 [node name="Sprite" type="AnimatedSprite" parent="Player" index="0"]
 
 frames = SubResource( 1 )
-animation = "default"
+animation = "Default"
 frame = 1
 playing = true
 
